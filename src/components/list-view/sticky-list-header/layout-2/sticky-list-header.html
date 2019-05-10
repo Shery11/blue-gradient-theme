@@ -1,0 +1,37 @@
+<!-- Theme Sticky List Header - Product -->
+<ion-content no-padding>
+  <div *ngIf="data != null">
+    <ion-list *ngFor="let item of data.items">
+      <!--Text Header Top-->
+      <ion-list-header box-shadow no-lines header-title text-capitalize ion-affix [content]="content">
+        {{item.groupName}}
+      </ion-list-header>
+      <ion-card transparent *ngFor="let element of item.items">
+        <h2 card-title item-start text-wrap>{{element.title}}</h2>
+        <!--Big Card -->
+        <div images-gallery>
+          <div big-image>
+            <img box-shadow  [src]="element.image1" [alt]="element.title" />
+          </div>
+          <!--Gallery Card -->
+          <div list-images (click)="onEvent('onItemClick', element.title, $event)">
+            <div box-shadow  images background-size [ngStyle]="{'background-image': 'url(' + element.image2 + ')'}" [title]="element.title"></div>
+            <div box-shadow  images background-size [ngStyle]="{'background-image': 'url(' + element.image3 + ')'}" [title]="element.title"></div>
+            <div box-shadow  images background-size [ngStyle]="{'background-image': 'url(' + element.image4 + ')'}" [title]="element.title"></div>
+          </div>
+        </div>
+
+        <!-- Card Content -->
+        <ion-card-content>
+          <ion-item no-padding no-lines>
+            <span padding-left span-large>{{element.price}}</span>
+              <span new-category text-uppercase text-wrap>{{element.subtitle}}</span>
+              <div margin-right button-block item-content>
+                  <button box-shadow full ion-button default-button (click)="onEvent('onBuy', 'Buy', $event)">{{element.buy}}</button>
+              </div>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+</ion-content>

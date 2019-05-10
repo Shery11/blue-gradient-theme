@@ -1,0 +1,7 @@
+{
+  "name": "blue-gradient-ionic-3-iOS-12",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

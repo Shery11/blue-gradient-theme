@@ -1,0 +1,87 @@
+/*  #Style Register + logo
+================================================*/
+register-layout-1 {
+  ion-grid,
+  ion-row {
+    height: 100%;
+  }
+
+  [background-size] {
+    position: relative;
+  }
+
+  img {
+    max-width: 170px;
+    max-height: 40px;
+    margin-bottom: 10px;
+  }
+
+  ion-item {
+    padding-left: 0 !important;
+    padding-bottom: 15px !important;
+
+    [error-field] {
+      margin: 0 !important;
+      position: absolute !important;
+      bottom: 0 !important;
+      right: 5px !important;
+      font-size: $h6-font-size;
+    }
+
+    .item-inner {
+      border-bottom: none !important;
+      box-shadow: none !important;
+      padding-right: 0 !important;
+    }
+
+    ion-label {
+      margin: 0 5px !important;
+    }
+
+    ion-input {
+      background: theme-colors('mainColors', 'primaryBase') !important;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1) !important;
+      margin: 5px 10px 15px 10px !important;
+      padding: 5px 10px !important;
+      width: calc(100% - 9px);
+      border-radius: 24px;
+      z-index: 999;
+
+      .input-cover {
+        display: none;
+      }
+    }
+  }
+
+  .toolbar-ios {
+    min-height: 64px;
+  }
+
+  .bar-button-default-ios,
+  .toolbar-title-ios {
+    padding-top: 20px;
+  }
+  // Title
+  [register-title] {
+    color: color($register, register-logo-title);
+  }
+
+  [stacked] {
+    font-size: $text-font-size !important;
+  }
+
+  .item-label-stacked ion-datetime {
+    background: theme-colors('mainColors', 'primaryBase') !important;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1) !important;
+    margin: 5px 10px 15px 10px !important;
+    padding: 5px 10px !important;
+    width: calc(100% - 9px);
+    border-radius: 24px;
+    z-index: 999;
+  }
+
+  .datetime-text {
+    color: theme-colors('textColors', 'accent');
+    margin: 8px 0;
+  }
+}

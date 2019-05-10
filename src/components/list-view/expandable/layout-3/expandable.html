@@ -1,0 +1,47 @@
+<!-- Themes Expandable - Filters Products -->
+<ion-content>
+  <ion-grid no-padding *ngIf="data != null">
+    <ion-row>
+      <ion-col col-12 no-padding no-margin>
+        <!-- Header -->
+        <ion-list>
+          <ion-list-header box-shadow no-lines header-section no-margin>
+            <h1 header-title text-capitalize>{{data.header}}</h1>
+          </ion-list-header>
+          <!--- List Content -->
+          <ul no-margin no-padding class="collapsible">
+            <li no-margin *ngFor="let group of data.items;">
+              <!-- Expandable - Filters Products - Header-->
+              <div class="collapsible-header" no-margin no-padding (click)="toggleGroup(group)">
+                <ion-item default-item no-lines>
+                  <h2 item-title text-capitalize>{{group.title}}</h2>
+                  <ion-icon icon-small item-end>
+                    <i class="icon {{group.icon}}"></i>
+                  </ion-icon>
+                </ion-item>
+              </div>
+              <!-- End Expandable - Filters Products - Header-->
+              <!-- Expandable - Filters Productsr - Body -->
+              <div class="item-accordion" [ngClass]="{'active': isGroupShown(group) }"
+              [hidden]="!isGroupShown(group)">
+                <ion-item default-item no-lines *ngFor="let item of group.expandItems;"
+                (tap)="onEvent('onCheckBoxClick', item, $event);">
+                  <ion-label item-title>{{item.title}}</ion-label>
+                  <ion-checkbox [checked]="item.isChecked"></ion-checkbox>
+                </ion-item>
+              </div>
+              <!-- End Expandable - Filters Productsr- Body -->
+            </li>
+          </ul>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-footer no-lines  padding-horizontal transparent>
+    <ion-toolbar text-center padding-bottom transparent>
+      <!-- Footer Button -->
+      <button box-shadow ion-button default-button block *ngIf="data != null"
+      (click)="onEvent('onButtonClick', null, $event)">{{data.button}}</button>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

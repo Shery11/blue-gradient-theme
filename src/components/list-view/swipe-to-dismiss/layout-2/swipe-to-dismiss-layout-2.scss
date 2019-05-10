@@ -1,0 +1,19 @@
+/*  #Style Swipe To Dismiss - Products + CTA
+===========================================*/
+swipe-to-dismiss-layout-2 {
+  .list ion-item-options {
+    border-bottom: none !important;
+
+    .button {
+      background: theme-colors('mainColors', 'accentBase');
+    }
+  }
+
+  .item-inner {
+    padding: 0 !important;
+  }
+
+  ion-label {
+    margin: 0 !important;
+  }
+}

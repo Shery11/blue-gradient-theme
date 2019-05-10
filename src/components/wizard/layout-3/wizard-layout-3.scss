@@ -1,0 +1,52 @@
+/*  #Style Wizard Big image
+===========================================*/
+
+wizard-layout-3 {
+  .slide-zoom {
+    position: absolute !important;
+    top: 15% !important;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 150px;
+      bottom: -16px;
+      height: 1px;
+      background-color: theme-colors('mainColors', 'primaryBase');
+      left: calc(50% - 75px);
+    }
+    // Wizard Content
+    [wizard-content] {
+      margin-left: auto;
+      margin-right: auto;
+      width: 250px;
+      z-index: 999;
+      position: relative;
+
+      [wizard-subtitle] {
+        color: color($wizardPage, wizard-subtitle-big-image-text);
+      }
+
+      [wizard-title] {
+        color: color($wizardPage, wizard-title-big-image-text);
+        font-weight: bold;
+      }
+    }
+  }
+  // Button Wizard
+  [default-button] {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    font-weight: 300 !important;
+    transform: translateX(-50%);
+  }
+  // Settings Pagination
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 100px;
+  }
+
+  .swiper-pagination-bullet {
+    background: theme-colors('mainColors', 'primaryBase') !important;
+  }
+}

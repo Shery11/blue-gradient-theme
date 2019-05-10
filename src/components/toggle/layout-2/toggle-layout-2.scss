@@ -1,0 +1,18 @@
+/*  #Style Toggle - Simple 2
+===========================================*/
+toggle-layout-2 {
+  ion-item {
+    .input-wrapper {
+      display: block;
+
+      ion-label {
+        margin: 0 !important;
+        padding: 10px 0 5px;
+      }
+
+      ion-label:nth-child(2) {
+        padding: 0 0 10px;
+      }
+    }
+  }
+}

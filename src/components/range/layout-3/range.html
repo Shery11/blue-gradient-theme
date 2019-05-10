@@ -1,0 +1,14 @@
+<!-- RANGE COMPONENTS - With perdefined steps -->
+<ion-list no-lines *ngIf="data != null">
+    <!--- Divider item-->
+    <ion-item-divider no-lines no-margin>
+        <p ion-text color="primaryBase">{{data.title}}</p>
+        <ion-badge item-end>{{data.value}}</ion-badge>
+    </ion-item-divider>
+    <ion-item>
+        <ion-range [min]="data.min" [max]="data.max" [step]="data.step" snaps="true" (ionChange)="onEvent('onChange', data.value, $event)" [(ngModel)]="data.value">
+            <ion-label range-left color="secondaryBase" span-small>{{data.textLeft}}</ion-label>
+            <ion-label range-right span-large color="secondaryBase">{{data.textRight}}</ion-label>
+        </ion-range>
+    </ion-item>
+</ion-list>

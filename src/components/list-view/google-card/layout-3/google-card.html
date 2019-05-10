@@ -1,0 +1,26 @@
+<!--Theme Google Card - Styled cards-->
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row *ngIf="data != null">
+      <ion-col col-12 col-md-6 col-lg-6 col-xl-4 *ngFor="let item of data.items;let i = index">
+        <!--Header Styled cards-->
+        <ion-item padding-top no-lines>
+          <!-- Card Title -->
+          <h2 card-title>{{item.title}}</h2>
+          <!-- Card Badge -->
+          <ion-badge box-shadow  item-end badge-light>{{item.button}}</ion-badge>
+        </ion-item>
+        <!-- End Header Styled Cards-->
+        <!-- Card Background -->
+        <ion-card box-shadow (click)="onEvent('onItemClick', item.subtitle, $event)">
+          <img [src]="item.image" />
+          <div text-center title-block>
+            <!-- Card Subtitle -->
+            <h3 card-subtitle>{{item.subtitle}}</h3>
+          </div>
+          <span new-category padding-bottom text-uppercase>{{item.category}}</span>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

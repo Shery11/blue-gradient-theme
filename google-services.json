@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "1044460112694",
+    "firebase_url": "https://blue-green-gradient.firebaseio.com",
+    "project_id": "blue-green-gradient"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044460112694:android:cc699e80a0acf320",
+        "android_client_info": {
+          "package_name": "com.csform.bluegreenthemeios12"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044460112694-ca4q0smpv2du45biuu91sm849b12aakf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlBBahoAdsft47yfK8KlGOHIe8BTYIF1w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

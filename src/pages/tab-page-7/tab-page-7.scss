@@ -1,0 +1,15 @@
+/*  #Style Settings for Tab-7
+===========================================*/
+[tabPage7] {
+  [card-title] {
+    color: color($googleCard, card-title-basic);
+  }
+
+  [card-subtitle] {
+    color: color($googleCard, card-subtitle-basic);
+  }
+
+  [card-body-text] {
+    color: color($googleCard, card-description-basic);
+  }
+}

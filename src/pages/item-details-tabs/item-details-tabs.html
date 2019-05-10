@@ -1,0 +1,22 @@
+<!--Tabs Page Component-->
+<ion-header>
+    <ion-navbar box-shadow>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>{{params.title}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<!-- Content -->
+
+<!--TABS PAGE - Footer tab - text -->
+<tabs-layout-1 has-header *ngIf="params.tabsLayout1" [data]="params.data" [events]="params.events">
+</tabs-layout-1>
+
+<!--TABS PAGE - Footer tab - icons -->
+<tabs-layout-2 has-header *ngIf="params.tabsLayout2" [data]="params.data" [events]="params.events">
+</tabs-layout-2>
+
+<!--TABS PAGE - Header tab - text -->
+<tabs-layout-3 *ngIf="params.tabsLayout3" [data]="params" [events]="params.events">
+</tabs-layout-3>

@@ -1,0 +1,20 @@
+/*  #Style Drag and drop - Medium item with avatar
+==========================================*/
+drag-and-drop-layout-3 {
+  .item-inner {
+    padding-right: 0 !important;
+  }
+  // Footer Settings Background Images and Border
+  ion-footer {
+    &.footer-md::before {
+      background-image: none;
+    }
+
+    .toolbar-ios:first-child .toolbar-background-ios {
+      border-width: 0 !important;
+    }
+  }
+  .button-md {
+    height: 44px;
+  }
+}

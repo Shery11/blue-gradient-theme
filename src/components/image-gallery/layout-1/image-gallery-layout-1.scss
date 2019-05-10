@@ -1,0 +1,49 @@
+/*  #Style Full gallery 1
+===========================================*/
+
+image-gallery-layout-1 {
+  .scroll-content {
+    background-color: theme-colors('mainColors', 'primaryBase');
+  }
+
+  ion-card {
+    position: relative;
+    height: 170px;
+    width: calc(100%) !important;
+    border-radius: $border-radius !important;
+    box-shadow: none !important;
+
+    &:before {
+      content: "";
+      position: absolute;
+      @extend .gallery-gradient;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      bottom: 0;
+      z-index: 9;
+    }
+  }
+
+  .card-ios,
+  .card-md {
+    margin: 0 !important;
+  }
+
+  [gallery-description] {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    padding: 15px;
+    z-index: 9;
+
+    [gallery-subtitle] {
+      color: color($imageGallery, full-gallery-1-subtitle);
+    }
+
+    [gallery-title] {
+      color: color($imageGallery, full-gallery-1-title);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/*  # Theme With avatar
+===========================================*/
+check-box-layout-2 {
+  .input-wrapper {
+    display: block;
+
+    .label {
+      margin: 0;
+      &[padding-top] {
+        padding-top: 25px;
+      }
+    }
+    [item-title] {
+      padding-bottom: 5px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<!-- Theme Sticky List Header - Basic -->
+<ion-content>
+  <div *ngIf="data != null">
+    <ion-list no-margin *ngFor="let item of data.items">
+      <!-- Header Top -->
+      <ion-item-divider box-shadow text-capitalize no-margin no-lines header-title ion-affix
+        [content]="content">{{item.groupName}}
+      </ion-item-divider>
+      <ion-item default-item *ngFor="let element of item.items" no-lines
+        (click)="onEvent('onItemClick', element.title, $event)">
+        <!-- Avatar -->
+        <ion-avatar item-start>
+          <img [src]="element.image" [alt]="element.title" />
+        </ion-avatar>
+        <!-- Title -->
+        <h2 item-title text-capitalize>{{element.title}}</h2>
+        <!-- Subtitle -->
+        <p item-subtitle>{{element.subtitle}}</p>
+        <!-- Badge -->
+        <ion-badge item-end box-shadow (click)="onEvent('onProceed', element.price, $event)" badge-light>{{element.price}}</ion-badge>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

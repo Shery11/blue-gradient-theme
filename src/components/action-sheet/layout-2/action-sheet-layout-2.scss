@@ -1,0 +1,104 @@
+/*  Theme Action Sheet - News
+===========================================*/
+action-sheet-layout-2 {
+  @include settingAnimationHeader;
+  @-webkit-keyframes color-change {
+    0% {
+      color: theme-colors('textColors', 'primary');
+    }
+
+    100% {
+      color: theme-colors('textColors', 'accent') !important;
+    }
+  }
+
+  .toolbar-ios {
+    min-height: 64px;
+  }
+
+  .bar-button-default-ios,
+  .toolbar-title-ios {
+    padding-top: 20px;
+  }
+
+  .content-ios .scroll-content {
+    top: -64px !important;
+  }
+
+  .active .back-button,
+  .active .toolbar-title {
+    color: theme-colors('textColors', 'accent') !important;
+    animation-name: color-change;
+    animation-duration: 400ms;
+  }
+
+  .back-button,
+  .toolbar-title {
+    color: theme-colors('textColors', 'primary') !important;
+  }
+
+  .scroll-content {
+    top: -56px;
+  }
+
+  [background-size] {
+    height: 250px;
+    position: relative;
+
+    &:before {
+      content: "";
+      @include gradient-secondary;
+      position: absolute;
+      height: 50%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  ion-avatar {
+    min-width: 48px !important;
+    min-height: 48px !important;
+
+    img {
+      width: 48px !important;
+      height: 48px !important;
+    }
+  }
+
+  [title-block] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    [new-category] {
+      width: 100%;
+      color: color($parallaxPage, parallax-category-news) !important;
+      z-index: 999;
+      font-size: $h3-font-size !important;
+      font-weight: 400px;
+      position: relative;
+    }
+  }
+
+  [parallax-title] {
+    color: color($parallaxPage, parallax-title-news) !important;
+    font-weight: 400 !important;
+    z-index: 999;
+    position: relative;
+  }
+
+  [parallax-subtitle] {
+    color: color($parallaxPage, parallax-subtitle-news) !important;
+  }
+
+  [parallax-description] {
+    color: color($parallaxPage, parallax-description-basic) !important;
+    font-size: $h5-font-size !important;
+  }
+
+  [button-action-shit] {
+    color: color($buttonActionShit, color-primary) !important;
+  }
+}

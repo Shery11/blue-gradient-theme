@@ -1,0 +1,13 @@
+<!-- RANGE COMPONENTS - Two sliders -->
+<ion-list no-lines *ngIf="data != null">
+    <!--- Divider item-->
+    <ion-item-divider no-lines no-margin>
+        <p ion-text color="primaryBase">{{data.title}}</p>
+    </ion-item-divider>
+    <ion-item>
+        <ion-range dualKnobs="true" pin="true" [(ngModel)]="data.value" (ionChange)="onEvent('onChange', data.value, $event)">
+            <ion-label range-left span-large color="secondaryBase">{{data.textLeft}}</ion-label>
+            <ion-label range-right span-large color="secondaryBase">{{data.textRight}}</ion-label>
+        </ion-range>
+    </ion-item>
+</ion-list>

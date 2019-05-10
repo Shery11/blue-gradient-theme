@@ -1,0 +1,68 @@
+// http://ionicframework.com/docs/v2/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+// Settings Style Main Meni
+
+[header-background-image] {
+  height: 250px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+
+  [header-title] {
+    padding-right: 10%;
+    color: theme-colors('textColors', 'secondaryDark');
+    padding: 0;
+    z-index: 999;
+    font-weight: 400 !important;
+    margin-top: 40px;
+    line-height: 23px;
+    align-items: flex-end;
+    display: flex;
+    flex: 1;
+  }
+
+  img {
+    position: relative;
+    padding-top: 24px;
+    max-width: 185px;
+    z-index: 999;
+    display: flex;
+    align-self: end;
+  }
+}
+
+.header-ios {
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+      width: 24px !important;
+      margin-right: 0 !important;
+  }
+}
+
+[main-menu], [sub-menu] {
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before {
+    color: theme-colors('textColors', 'accent');
+  }
+
+  .item-inner {
+    margin-left: 6px !important;
+  }
+
+  ion-label {
+    font-weight: 300;
+  }
+}

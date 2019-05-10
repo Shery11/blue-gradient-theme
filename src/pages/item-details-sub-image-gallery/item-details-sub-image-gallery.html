@@ -1,0 +1,16 @@
+<!--Sub-gallery components-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>sub-gallery</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div header-section>
+        <h1 header-title no-margin padding-left text-capitalize>{{params.data.title}}</h1>
+    </div>
+    <sub-image-gallery-layout-1 *ngIf="params.layout == 1" [data]="params.data" [events]="params.events"></sub-image-gallery-layout-1>
+    <sub-image-gallery-layout-2 *ngIf="params.layout == 2" [data]="params.data" [events]="params.events"></sub-image-gallery-layout-2>
+</ion-content>

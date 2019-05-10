@@ -1,0 +1,12 @@
+/*  #Style Sticky List Header - Basic
+================================================*/
+sticky-list-header-layout-1 {
+  [ion-affix] {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    border-top: none !important;
+    color: theme-colors('textColors', 'accent');
+    line-height: 30px;
+  }
+}

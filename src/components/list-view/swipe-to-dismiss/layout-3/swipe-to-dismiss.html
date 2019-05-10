@@ -1,0 +1,27 @@
+<!-- Themes Swipe To Dismiss - Full width image -->
+<ion-content padding-top>
+  <ion-grid no-padding *ngIf="data != null">
+    <ion-row>
+      <ion-col col-12 align-self-end>
+        <ion-list>
+          <ion-item-sliding transparent *ngFor="let item of data.items" #slidingItem>
+            <ion-item no-lines box-shadow background-size (click)="onEvent('onItemClick', item.title, $event)" [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+              <div title-block>
+                <!-- Subtitle -->
+                <p card-subtitle>{{item.subtitle}}</p>
+                <!-- Title -->
+                <h1 card-title text-wrap>{{item.title}}</h1>
+              </div>
+            </ion-item>
+            <!---Action Button-->
+            <ion-item-options>
+              <button ion-button text-capitalize transparent (click)="delete(item)">
+              {{item.delate}}
+            </button>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

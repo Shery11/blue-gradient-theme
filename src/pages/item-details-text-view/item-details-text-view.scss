@@ -1,0 +1,82 @@
+
+
+.default-background {
+    background-color: theme-colors('mainColors', 'primaryBase');
+    [button-action-shit] {
+      color: theme-colors('textColors', 'secondaryDark');
+    }
+}
+
+.title-components {
+    color: #414141;
+    font-size: $h1-font-size;
+    font-weight: bold;
+    clear: both;
+    display: block;
+    margin: 20px 0;
+    padding-top: 20px;
+    border-top: 1px solid theme-colors('mainColors', 'borderColor');
+}
+
+.title-components:nth-child(1) {
+  border: none !important;
+  font-size: 34px;
+  margin: 0;
+  padding-top: 0;
+}
+
+span.compomets {
+    display: block;
+    clear: both;
+    font-size: $h3-font-size;
+    color: #7F8490;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.block-insert {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.example-h1 {
+    font-size: $h1-font-size;
+    color: #414141;
+    font-weight: bold;
+}
+
+.example-h2 {
+    font-size: $h2-font-size;
+    color: #414141;
+    font-weight: 400;
+}
+
+.example-h3 {
+    font-size: $h3-font-size;
+    color: #414141;
+    font-weight: 400;
+}
+
+.example-h4 {
+    font-size: $h4-font-size;
+    color: #414141;
+    font-weight: 400;
+}
+
+.example-h5 {
+    font-size: $h5-font-size;
+    color: #414141;
+    font-weight: 400;
+}
+
+.example-h6 {
+    font-size: $h6-font-size;
+    color: #414141;
+    font-weight: 300;
+}
+
+.example-p {
+    font-size: $text-font-size;
+    color: #414141;
+    font-weight: 300;
+}

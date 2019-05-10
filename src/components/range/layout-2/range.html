@@ -1,0 +1,14 @@
+<!-- RANGE COMPONENTS - With icons -->
+<ion-list no-lines *ngIf="data != null">
+   <!--- Divider item-->
+    <ion-item-divider no-lines no-margin>
+      <p ion-text color="primaryBase">{{data.title}}</p>
+      <ion-badge item-end>{{data.value}}</ion-badge>
+    </ion-item-divider>
+    <ion-item>
+        <ion-range [min]="data.min" [max]="data.max" pin="true" (ionChange)="onEvent('onChange', data.value, $event)" [(ngModel)]="data.value">
+            <ion-icon range-left color="secondaryBase" [name]="data.iconLeft"></ion-icon>
+            <ion-icon range-right color="secondaryBase" [name]="data.iconRight"></ion-icon>
+        </ion-range>
+    </ion-item>
+</ion-list>

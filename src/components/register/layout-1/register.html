@@ -1,0 +1,69 @@
+<!-- Themes Register + logo -->
+<ion-header>
+  <ion-navbar transparent>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngIf="data != null">{{data.toolbarTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<!--Content -->
+<ion-content *ngIf="data != null" background-size [ngStyle]="{'background-image': 'url(' + data.background + ')'}">
+  <ion-grid *ngIf="data != null">
+    <ion-row padding-horizontal align-items-start>
+      <ion-col col-12 no-padding>
+        <button ion-button text-capitalize button-clear clear float-right (click)="onEvent('onSkip')">{{data.skip}}</button>
+      </ion-col>
+      <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+        <!---Logo-->
+        <ion-item transparent text-center>
+          <!---Logo-->
+          <img [src]="data.logo">
+          <!--Form Title-->
+          <h1 register-title text-wrap>{{data.title}}</h1>
+        </ion-item>
+        <!---Input field username-->
+        <ion-item transparent text-center>
+          <ion-label stacked>{{data.lableUsername}}</ion-label>
+          <ion-input text-center required [placeholder]="data.username" type="text" [(ngModel)]="username"></ion-input>
+          <ion-label error-field no-margin *ngIf="!isUsernameValid">{{data.errorUser}}</ion-label>
+        </ion-item>
+        <!---Input field password-->
+        <ion-item transparent text-center>
+          <ion-label stacked>{{data.lablePassword}}</ion-label>
+          <ion-input text-center required [placeholder]="data.password" type="password" [(ngModel)]="password"></ion-input>
+          <ion-label error-field no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label>
+        </ion-item>
+        <!---Input field email-->
+        <ion-item transparent text-center>
+          <ion-label stacked>{{data.lableEmail}}</ion-label>
+          <ion-input text-center required [placeholder]="data.email" type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required [(ngModel)]="email"></ion-input>
+          <ion-label error-field no-margin *ngIf="!isEmailValid">{{data.errorEmail}}</ion-label>
+        </ion-item>
+        <!---Input field country-->
+        <ion-item transparent text-center>
+          <ion-label stacked>{{data.lableCountry}}</ion-label>
+          <ion-input text-center required [placeholder]="data.country" type="text" pattern="[a-zA-Z ]*" required [(ngModel)]="country"></ion-input>
+          <ion-label error-field no-margin *ngIf="!isCountryValid">{{data.errorCountry}}</ion-label>
+        </ion-item>
+        <!---Input field city-->
+        <ion-item transparent text-center>
+          <ion-label stacked>{{data.lableCity}}</ion-label>
+          <ion-input text-center required [placeholder]="data.city" type="text" pattern="[a-zA-Z ]*" required [(ngModel)]="city"></ion-input>
+          <ion-label error-field no-margin *ngIf="!isCityValid">{{data.errorCity}}</ion-label>
+        </ion-item>
+        <ion-item text-center transparent>
+          <ion-label stacked>{{data.lableDate}}</ion-label>
+          <ion-datetime transparent [displayFormat]="data.dateFormat" [placeholder]="data.birth" [(ngModel)]="birth"></ion-datetime>
+          <ion-label error-field no-margin *ngIf="!isBirthValid">{{data.errorBirth}}</ion-label>
+        </ion-item>
+        <ion-item transparent no-lines no-margin no-padding *ngFor="let item of data.items" (tap)="onEvent('onButton', item)">
+          <ion-label text-right item-subtitle>{{item.title}}</ion-label>
+          <ion-checkbox item-end [checked]="item.isChecked"></ion-checkbox>
+        </ion-item>
+        <!---Register button-->
+        <button ion-button block default-button text-capitalize box-shadow margin-bottom (click)="onEvent('onRegister')">{{data.register}}</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

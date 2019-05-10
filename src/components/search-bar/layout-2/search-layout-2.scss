@@ -1,0 +1,21 @@
+/*  #Style Search - Field + Header
+===========================================*/
+
+search-bar-layout-2 {
+  // Settings Big Image
+  ion-navbar {
+    z-index: 9999;
+    position: relative;
+  }
+
+  [search-bar-bcg] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  [search-bar-title] {
+    color: color($searchPage, search-title-field-header-1);
+    padding-bottom: 10px;
+    padding-left: 8px;
+  }
+}

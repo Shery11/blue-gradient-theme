@@ -1,0 +1,16 @@
+<!--- Settings TAB lauout-3 -->
+<ion-content>
+  <ion-list-header box-shadow header-section no-lines padding-horizontal no-margin *ngIf="params != null">
+      <h1 header-title text-capitalize>{{params.header}}</h1>
+  </ion-list-header>
+    <ion-list tabPage3 *ngIf="params != null">
+        <ion-item default-item no-lines *ngFor="let item of params.items; let i = index;" (click)="onItemClick(item, $event)">
+            <ion-avatar item-start>
+                <img [src]="item.avatar" />
+            </ion-avatar>
+            <h2 item-title>{{item.title}}</h2>
+            <h3 item-subtitle text-wrap>{{item.subtitle}}</h3>
+            <button box-shadow text-capitalize button-follow ion-button item-end>{{item.follow}}</button>
+        </ion-item>
+    </ion-list>
+</ion-content>

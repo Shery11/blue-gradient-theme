@@ -1,0 +1,38 @@
+/*  #Style Wizard Big image
+===========================================*/
+wizard-layout-2 {
+  [header-slider] {
+    height: 100%;
+    background-size: 100% 60% !important;
+    background-position: top !important;
+    background-color: theme-colors('mainColors', 'primaryBase');
+  }
+  //
+  [wizard-description],
+  [wizard-subtitle],
+  [wizard-title] {
+    color: theme-colors('textColors', 'secondaryDark');
+  }
+
+  .slide-zoom {
+    width: calc(100% - 40px);
+    height: 100%;
+    position: relative;
+
+    [background-size] {
+      border-radius: 10px;
+      position: absolute;
+      bottom: 10%;
+      width: 100%;
+    }
+  }
+
+  // Settings Pagination
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 20px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: theme-colors('mainColors', 'accentBase');
+  }
+}
